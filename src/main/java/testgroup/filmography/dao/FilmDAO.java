@@ -1,10 +1,10 @@
-package filmography.service;
+package testgroup.filmography.dao;
 
-import filmography.model.Film;
+import testgroup.filmography.model.Film;
 
 import java.util.List;
 
-public interface FilmService {
+public interface FilmDAO {
     List<Film> allFilms();
     void add(Film film);
     void delete(Film film);

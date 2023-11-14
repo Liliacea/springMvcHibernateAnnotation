@@ -16,7 +16,7 @@
         <th>watched</th>
         <th>action</th>
     </tr>
-    <c:forEach var="film" items="${filmList}">
+    <c:forEach var="film" items="${filmsList}">
         <tr>
             <td>${film.id}</td>
             <td>${film.title}</td>
@@ -24,6 +24,7 @@
             <td>${film.genre}</td>
             <td>${film.watched}</td>
             <td>
+
                 <a href="/edit/${film.id}">edit</a>
                 <a href="/delete/${film.id}">delete</a>
             </td>
