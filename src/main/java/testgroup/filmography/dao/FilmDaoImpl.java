@@ -21,7 +21,11 @@ public class FilmDaoImpl implements FilmDAO{
     @SuppressWarnings("uncheked")
     public List<Film> allFilms() {
         Session session = sessionFactory.getCurrentSession();
-        return session.createQuery("from Film").list();
+        List<Film> films = session.createSQLQuery("select * from films").list();
+        for (Film film: films) {
+            System.out.println(film.getTitle());
+        }
+        return films;
     }
 
     @Override

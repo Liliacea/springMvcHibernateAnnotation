@@ -14,8 +14,9 @@ public class FilmServiceImpl implements FilmService{
     public void setFilmDAO(FilmDAO filmDAO) {
         this.filmDAO = filmDAO;
     }
-@Transactional
+
     @Override
+    @Transactional
     public List<Film> allFilms() {
         return filmDAO.allFilms();
     }
